@@ -1,0 +1,96 @@
+/*-----------------------------SEARCH BAR AND BUTTON STYLING*/
+
+.search-bar {
+  margin: 0 auto;
+}
+
+.search-btn {
+  text-align: right;
+  padding: 0;
+  font-size: 1.5em;
+  color: #f1f6f9;
+  background: none;
+  border: none;
+  margin-right: 1em;
+}
+
+.search-field {
+  background: #f1f6f9;
+  border-radius: 30px;
+  border-color: #f1f6f9;
+  color: #f1f6f9;
+}
+
+/*---------------------------BACKGROUND IMAGES AND BACKGROUND COLORS*/
+.wrap {
+  background-image: url("../images/background.svg");
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+}
+.display-wrap {
+  background-color: rgba(57, 72, 103, 0.8);
+}
+
+/*------------------------------------------------------MAIN STYLING*/
+.day-large {
+  font-family: "Shrikhand", cursive;
+  color: #f1f6f9;
+  font-size: 3em;
+  letter-spacing: 2px;
+}
+
+.date-large {
+  font-family: "Shrikhand", cursive;
+  color: #f1f6f9;
+  font-size: 2em;
+  letter-spacing: 2px;
+}
+
+.weather-description-large {
+  color: #f5b461;
+  font-size: 4em;
+  font-family: "Poiret One", cursive;
+}
+
+.temp-large {
+  color: #f1f6f9;
+  font-size: 6em;
+  font-family: "Stardos Stencil", cursive;
+}
+
+.city-large {
+  color: #ffabe1;
+  font-size: 2em;
+  font-family: "Poiret One", cursive;
+}
+
+.weather-small {
+  font-family: "Shrikhand", cursive;
+  color: #f1f6f9;
+  font-size: 2em;
+  letter-spacing: 2px;
+}
+
+p.temp-small {
+  font-size: 2em;
+  color: #ffabe1;
+  font-family: "Stardos Stencil", cursive;
+  display: inline;
+  margin-left: 20px;
+}
+p.date-small {
+  font-size: 2em;
+  font-family: "Poiret One", cursive;
+  color: #f5b461;
+  display: inline;
+}
+
+hr.separator {
+  color: #f1f6f9;
+  width: 500px;
+  height: 10px;
+  margin: 0 auto;
+  border-radius: 5px;
+}
