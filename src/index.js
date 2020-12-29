@@ -44,11 +44,6 @@ alert(`It is currently ${celsiusTemp}°C (${fahrenheitTemp}°F) in ${city} with 
 
 
 
-
-
-
-
-
 /*function cityWeather() {
     let city = prompt("Enter a city please?");
     city = city.toLowerCase();
