@@ -12,7 +12,7 @@ let weather = {
     temp: 30.2,
     humidity: 20
   },
-  "sanFrancisco": {
+  "san francisco": {
     temp: 20.9,
     humidity: 100
   },
@@ -22,7 +22,34 @@ let weather = {
   }
 };
 
-function cityWeather() {
+let city = prompt(`Enter a city please? 💫`);
+city = city.toLowerCase();
+city = city.trim();
+
+if (weather[city] !== undefined) {
+
+let temperature = weather[city].temp;
+let celsiusTemp = Math.round(temperature);
+let fahrenheitTemp =Math.round((temperature * 9/5) + 32);
+let humidity = weather[city].humidity;
+alert(`It is currently ${celsiusTemp}°C (${fahrenheitTemp}°F) in ${city} with a humidity of ${humidity}%`);
+
+} else {
+    alert(`Sorry, we don't know the weather for this city, try going to https://www.google.com/search?q=weather+${city}`);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*function cityWeather() {
     let city = prompt("Enter a city please?");
     city = city.toLowerCase();
     city = city.trim();
@@ -44,5 +71,8 @@ if (city === "paris") {
 }
 
 cityWeather(weather);
+
+*/
+
 
 
