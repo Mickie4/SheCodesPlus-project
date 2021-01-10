@@ -7,8 +7,7 @@
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/e7a363cb7a.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Shrikhand&family=Stardos+Stencil&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mali&family=Pacifico&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="src/style.css">
     <title>Weather App ☀️</title>
@@ -24,57 +23,80 @@
     </div>
 </nav> <!----------SEARCH BAR />-->
 
-<div class="container"> <!---------HOLDER FOR ALL THE INFORMATION WITH TRANSPARENT BACKGROUND-->
+<div class="container display p-5"> <!---------HOLDER FOR ALL THE INFORMATION WITH TRANSPARENT BACKGROUND-->
     <div class="row">
-        <div class="col-md-6 display-wrap mb-5 pb-5"> <!--------HERE IS WHERE ALL THE INFORMATION IN LARGE IS-->
-            <h1 class="day-large p-3">
+        <div class="col-md-6"> <!--------HERE IS WHERE ALL THE INFORMATION IN LARGE IS-->
+            <h1 class="day-large p-3 text-center">
                 Monday
             </h1>
-            <h2 class="date-large px-4">
-                January 2021
+            <h2 class="date-large text-center">
+                1 January 2021
             </h2>
-            <p class="weather-description-large text-center mt-3 p-5">
+
+            <p class="weather-description-large text-center mt-3 pt-5">
                 Mostly Cloudy
             </p>
-            <p class="temp-large text-center">
+            
+            <p class="temp-large text-center mt-3 mb-0">
                 9°C
             </p>
+            <div class="temp-buttons text-center">
+            <button class="temp-btn btn-lg">
+                C
+            </button>
+            |
+            <button class="temp-btn btn-lg">
+                F
+            </button>
+            </div>
+            <div class="img-wrap text-center">
+            <img src="images/cloudy.png" alt="clouds flat icon" class="img-fluid cloudy">
+            </div>
             <p class="city-large text-center">
                 Mexico City, Mexico.
             </p>
 
         </div><!--------HERE IS WHERE ALL THE INFORMATION IN LARGE IS />-->
-        <div class="col-md-6 display-wrap mb-5 pb-5"> <!---------------------------HERE IS WHERE ALL THE INFORMATION IN SMALLER SIZE IS-->
+        <div class="col-md-6 my-5 pb-5"> <!---------------------------HERE IS WHERE ALL THE INFORMATION IN SMALLER SIZE IS-->
+            <hr class="separator d-md-none"/>
             <!----------------------------------FIRST SECTION-->
             <p class="weather-small text-center p-3">
-                Mostly Cloudy
+                Windy
             </p>
-            <p class="temp-small p-5">
+            <div class="days-wrap text-center">
+            <p class="temp-small align-bottom">
                 9°C
             </p>
-            <p class="date-small p-5">
-                02/01/2021
-            </p>
+            <img src="images/windy.png" alt="clouds and wind icon" class="img-fluid weather-icon">
+        </div>
+         <p class="date-small mb-0">
+            02/01/2021
+         </p>
             <hr class="separator"/>
             <!----------------------------SECOND SECTION-->
             <p class="weather-small text-center p-3">
                 Clear
             </p>
-            <p class="temp-small p-5">
-                11°C
-            </p>
-            <p class="date-small p-5">
+            <div class="days-wrap text-center">
+                <p class="temp-small align-bottom">
+                    11°C
+                </p>
+                <img src="images/clear.png" alt="clouds and wind icon" class="img-fluid weather-icon">
+            </div>
+            <p class="date-small mb-0">
                 03/01/2021
             </p>
             <hr class="separator" />
             <!---------------------------THIRD SECTION-->
             <p class="weather-small text-center p-3">
-                Rainy
-            </p>
-            <p class="temp-small p-5">
-                7°C
-            </p>
-            <p class="date-small p-5">
+                Rain
+            <div class="days-wrap text-center">
+                <p class="temp-small align-bottom">
+                    7°C
+                </p>
+                <img src="images/rain.png" alt="clouds and wind icon" class="img-fluid weather-icon">
+            </div>
+            <p class="date-small mb-0">
                 04/01/2021
             </p>
             <hr class="separator" />
@@ -82,10 +104,13 @@
             <p class="weather-small text-center p-3">
                 Storms
             </p>
-            <p class="temp-small p-5">
-                3°C
-            </p>
-            <p class="date-small p-5">
+            <div class="days-wrap text-center">
+                <p class="temp-small align-bottom">
+                    3°C
+                </p>
+                <img src="images/storms.png" alt="clouds and wind icon" class="img-fluid weather-icon">
+            </div>
+            <p class="date-small mb-0">
                 05/01/2021
             </p>
             <hr class="separator" />
@@ -93,16 +118,21 @@
             <p class="weather-small text-center p-3">
                 Snow
             </p>
-            <p class="temp-small p-5">
-                -3°C
-            </p>
-            <p class="date-small p-5">
+            <div class="days-wrap text-center">
+                <p class="temp-small align-bottom">
+                    -3°C
+                </p>
+                <img src="images/snow.png" alt="clouds and wind icon" class="img-fluid weather-icon">
+            </div>
+            <p class="date-small mb-0">
                 06/01/2021
             </p>
             <hr class="separator" />
         </div> <!---------------------------HERE IS WHERE ALL THE INFORMATION IN SMALLER SIZE IS />-->
     </div>
 </div><!---------HOLDER FOR ALL THE INFORMATION WITH TRANSPARENT BACKGROUND />-->
+
+<p class="small text-center">CodedWithLoveBy💜  (<a href="https://michellemorales.co/" target="_blank">Michelle Morales </a>);</p>
 
     </div><!---------------------- ENTIRE APP WRAPPER />-->
 

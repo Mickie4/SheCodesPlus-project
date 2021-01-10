@@ -1,5 +1,14 @@
 /*-----------------------------SEARCH BAR AND BUTTON STYLING*/
 
+html, body { 
+margin:0;
+padding:5px;
+width:100%;
+height:100%;
+overflow: auto;
+background: #6bc5d7;
+}
+
 .search-bar {
   margin: 0 auto;
 }
@@ -23,74 +32,158 @@
 
 /*---------------------------BACKGROUND IMAGES AND BACKGROUND COLORS*/
 .wrap {
-  background-image: url("../images/background.svg");
+  background-image: url("../images/background-img.png");
   background-size: cover;
   background-position: center;
   margin: 0;
   padding: 0;
 }
-.display-wrap {
-  background-color: rgba(57, 72, 103, 0.8);
+.display {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 75px;
 }
 
 /*------------------------------------------------------MAIN STYLING*/
 .day-large {
-  font-family: "Shrikhand", cursive;
+  font-family: "Pacifico", cursive;
   color: #f1f6f9;
-  font-size: 3em;
-  letter-spacing: 2px;
+  font-size: 4.5em;
 }
 
 .date-large {
-  font-family: "Shrikhand", cursive;
+  font-family: "Mali", cursive;
   color: #f1f6f9;
   font-size: 2em;
-  letter-spacing: 2px;
 }
 
 .weather-description-large {
-  color: #f5b461;
-  font-size: 4em;
-  font-family: "Poiret One", cursive;
+  font-family: "Pacifico", cursive;
+  color: #f1f6f9;
+  font-size: 3em;
 }
 
 .temp-large {
+  font-family: "Mali", cursive;
   color: #f1f6f9;
-  font-size: 6em;
-  font-family: "Stardos Stencil", cursive;
+  font-size: 5em;
+}
+
+.temp-buttons,
+.temp-btn {
+  background: none;
+  border: none;
+  color: #f1f6f9;
+  transition: all 0.5s ease-in-out;
+  font-family: "Mali", cursive;
+}
+
+.temp-btn:hover {
+  color: #f5b461;
+}
+
+.cloudy {
+  width: 450px;
 }
 
 .city-large {
-  color: #ffabe1;
+  color: #f1f6f9;
   font-size: 2em;
-  font-family: "Poiret One", cursive;
+  font-family: "Mali", cursive;
 }
 
 .weather-small {
-  font-family: "Shrikhand", cursive;
+  font-family: "Pacifico", cursive;
   color: #f1f6f9;
-  font-size: 2em;
-  letter-spacing: 2px;
+  font-size: 3em;
+}
+
+.weather-icon {
+  width: 150px;
 }
 
 p.temp-small {
-  font-size: 2em;
-  color: #ffabe1;
-  font-family: "Stardos Stencil", cursive;
+  font-size: 2.5em;
+  color: #f1f6f9;
+  font-family: "Mali", cursive;
   display: inline;
-  margin-left: 20px;
 }
 p.date-small {
-  font-size: 2em;
-  font-family: "Poiret One", cursive;
-  color: #f5b461;
-  display: inline;
+  font-size: 1em;
+  font-family: "Mali", cursive;
+  color: #f1f6f9;
+  display: block;
+  text-align: right;
 }
 
 hr.separator {
   color: #f1f6f9;
-  width: 500px;
+  width: 600px;
   height: 10px;
   margin: 0 auto;
   border-radius: 5px;
+}
+
+.small {
+    margin-top: 75px;
+color: #f1f6f9;
+}
+
+.small a {
+    text-decoration: none;
+    font-style: italic;
+    color: rgb(141, 41, 235);
+    transition: all 0.5s ease-in-out;
+}
+
+.small a:hover {
+    color: #fff676;
+}
+
+/*---------------------------------------------------------------RESPONSIVE MEDIA QUERIES*/
+@media only screen and (max-width: 768px) {
+.day-large {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.date-large {
+    font-size: 1.5em;
+    text-align: center;
+
+}
+
+.weather-description-large {
+    font-size: 2.5em;
+}
+
+.temp-large {
+    font-size: 3em;
+}
+
+.cloudy {
+    width: 250px;
+}
+
+.city-large {
+    font-size: 1.2em;
+}
+
+hr.separator {
+    width: 280px;
+}
+
+.weather-small {
+    font-size: 2.5em;
+}
+
+p.temp-small {
+    font-size: 1.5em;
+}
+
+.weather-icon {
+    width: 85px;
+}
+
+
+
 }
