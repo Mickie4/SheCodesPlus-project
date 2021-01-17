@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Mali&family=Pacifico&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="src/style.css">
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script> <!---------------AXIOS CDN-->
     <title>Weather App ☀️</title>
 </head>
 <body>
@@ -17,8 +18,9 @@
 <nav class="navbar navbar-light bg-none mb-3"> <!----------SEARCH BAR-->
     <div class="container-fluid mt-3">
         <form class="search-bar d-flex" id="search-form">
-            <button class="search-btn" id="search-button" type="submit"><i class="fas fa-search"></i></button>
-            <input class="search-field form-control me-1 text-center" id="search-name" type="text" placeholder="City" aria-label="Search" autocomplete="off" autofocus="off">
+            <input class="search-field form-control me-3 text-center" id="search-name" type="text" placeholder="City" aria-label="Search" autocomplete="off" autofocus="off">
+            <button class="search" id="search-button" type="submit">Search</button>
+            <button class="search" id="current-location" type="button">Current</button>
         </form>
     </div>
 </nav> <!----------SEARCH BAR />-->
@@ -26,9 +28,12 @@
 <div class="container display p-5"> <!---------HOLDER FOR ALL THE INFORMATION WITH TRANSPARENT BACKGROUND-->
     <div class="row">
         <div class="col-md-6"> <!--------HERE IS WHERE ALL THE INFORMATION IN LARGE IS-->
-            <h1 class="day-large p-3 text-center">
-                Monday
+            <h1 class="day-large p-3 text-center" id="city-name">
+                Mexico City
             </h1>
+            <p class="date-large text-center">
+                Monday
+            </p>
             <h2 class="date-large text-center">
                 1 January 2021
             </h2>
@@ -53,9 +58,6 @@
             <div class="img-wrap text-center">
             <img src="images/cloudy.png" alt="clouds flat icon" class="img-fluid cloudy">
             </div>
-            <p class="city-large text-center" id="city-name">
-                Mexico City, Mexico.
-            </p>
 
         </div><!--------HERE IS WHERE ALL THE INFORMATION IN LARGE IS />-->
         <div class="col-md-6 my-5 pb-5"> <!---------------------------HERE IS WHERE ALL THE INFORMATION IN SMALLER SIZE IS-->
