@@ -34,21 +34,26 @@ body {
     border: none;
     color: #f1f6f9;
     font-size: 1.5em;
+    transition: all 0.5s ease-in-out;
+}
+
+.search:hover {
+    color: #f5b461;
 }
 
 
 /*------------------------------------------------------MAIN STYLING*/
 
-.day-large {
+.header-large {
     font-family: "Pacifico", cursive;
     color: #f1f6f9;
-    font-size: 4.5em;
+    font-size: 3em;
 }
 
 .date-large {
     font-family: "Mali", cursive;
     color: #f1f6f9;
-    font-size: 2em;
+    font-size: 1.4em;
 }
 
 .weather-description-large {
@@ -114,7 +119,7 @@ p.date-small {
 hr.separator {
     color: #f1f6f9;
     width: 600px;
-    height: 10px;
+    height: 5px;
     margin: 0 auto;
     border-radius: 5px;
 }
@@ -139,7 +144,7 @@ hr.separator {
 /*---------------------------------------------------------------RESPONSIVE MEDIA QUERIES*/
 
 @media only screen and (max-width: 768px) {
-    .day-large {
+    .header-large {
         font-size: 2.5em;
         text-align: center;
     }

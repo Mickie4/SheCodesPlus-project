@@ -1,16 +1,17 @@
-
 //Current time function
-
 
 let currentTime = new Date();
 let hours = currentTime.getHours();
 let minutes = currentTime.getMinutes();
+let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+day = days[currentTime.getDay()];
 
 let formatTime = `${hours}:${minutes}`;
 
 let htmlTime = document.querySelector("#current-time");
 
-htmlTime.innerHTML = formatTime;
+htmlTime.innerHTML = `Last Updated: ${day} ${formatTime}`;
 
 //Search Engine 
 
@@ -24,13 +25,14 @@ function searchFunction(event) {
 
     //City Temperature 
 
-    function cityTempCelsius(response) {
+    function cityTempInfo(response) {
         let tempResult = Math.round(response.data.main.temp);
         let tempDisplay = document.querySelector("#temp-display");
         tempDisplay.innerHTML = `${tempResult}°C`
+
     }
-    
-    
+
+
     //API to search for cityInput temperature in Celsius
 
     let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather?q=";
@@ -39,7 +41,7 @@ function searchFunction(event) {
     let fahrenheit = "imperial"
     let apiUrl = `${apiEndPoint}${cityName}&units=${celsius}&appid=${apiKey}`
 
-    axios.get(apiUrl).then(cityTempCelsius);
+    axios.get(apiUrl).then(cityTempInfo);
 }
 
 //Search engine function ends here!
@@ -71,7 +73,7 @@ function findCurrentLocation(event) {
         let units = "metric";
         let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather?"
         let apiKey = "0603e85b4ce086e6bb52d7cdc7bcffb5"
-        let apiUrl =`${apiEndPoint}lat=${lat}&lon=${lon}&units=${units}&appid=${apiKey}`;
+        let apiUrl = `${apiEndPoint}lat=${lat}&lon=${lon}&units=${units}&appid=${apiKey}`;
         axios.get(apiUrl).then(currentTemperature);
     }
 
@@ -79,9 +81,36 @@ function findCurrentLocation(event) {
 }
 
 
-let locationBtn= document.querySelector("#current-location");
+let locationBtn = document.querySelector("#current-location");
 locationBtn.addEventListener("click", findCurrentLocation);
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //Change the temperature
@@ -89,7 +118,7 @@ locationBtn.addEventListener("click", findCurrentLocation);
 function TempInF(event) {
     event.preventDefault();
     let currentTemp = 9;
-    let conversionToF = (currentTemp * 9/5) + 32;
+    let conversionToF = (currentTemp * 9 / 5) + 32;
     let tempDisplay = document.querySelector("#temp-display");
     tempDisplay.innerHTML = `${conversionToF}°F`;
 
@@ -109,7 +138,3 @@ function changeBack(event) {
 
 let celButton = document.querySelector("#temp-c");
 celButton.addEventListener("click", changeBack);
-
-
-
-

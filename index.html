@@ -18,43 +18,33 @@
 <body>
     <div class="container-fluid wrap">
         <!---------------------- ENTIRE APP WRAPPER-->
-        <nav class="nav navbar justify-content-center">
-            <form id="search-form">
-                <div class="row">
-                    <div class="col-6 mb-3">
-                        <input class="search-field form-control mb-3 text-center" id="search-name" type="text" placeholder="Enter a city" aria-label="Search" autocomplete="off" autofocus="off" />
-                    </div>
-                    <div class="col-3">
-                        <button class="search w-10" id="search-button" type="submit">
-                <i class="fas fa-search"></i>
-              </button>
-                    </div>
-                    <div class="col-3">
-                        <button class="search" id="current-location" type="button">
-                <i class="fas fa-map-marker-alt"></i>
-              </button>
-                    </div>
-                </div>
-            </form>
-        </nav>
         <!----------SEARCH BAR>-->
-
-        <div class="container display p-5">
+        <div class="container display p-2">
             <!---------HOLDER FOR ALL THE INFORMATION WITH TRANSPARENT BACKGROUND-->
+            <nav class="nav navbar justify-content-center">
+                <form id="search-form" class="mt-3">
+                    <div class="row">
+                        <div class="col-6 mb-3">
+                            <input class="search-field form-control mb-3 text-center" id="search-name" type="text" placeholder="Enter a city" aria-label="Search" autocomplete="off" autofocus="off" />
+                        </div>
+                        <div class="col-3">
+                            <button class="search" id="search-button" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+                        </div>
+                        <div class="col-3">
+                            <button class="search" id="current-location" type="button">
+                  <i class="fas fa-map-marker-alt"></i>
+                </button>
+                        </div>
+                    </div>
+                </form>
+            </nav>
             <div class="row">
                 <div class="col-md-6">
                     <!--------HERE IS WHERE ALL THE INFORMATION IN LARGE IS-->
-                    <h1 class="day-large p-3 text-center" id="city-name">
-                        Mexico City
-                    </h1>
-                    <p class="date-large text-center" id="current-day">Monday</p>
-                    <h2 class="date-large text-center">1 January 2021</h2>
-                    <h2 class="date-large text-center" id="current-time">15:02</h2>
-
-                    <p class="weather-description-large text-center mt-3 pt-5">
-                        Mostly Cloudy
-                    </p>
-
+                    <h1 class="header-large text-center" id="city-name">Mexico City</h1>
+                    <p class="date-large text-center mt-3" id="current-time">15:02</p>
                     <p class="temp-large text-center mt-3 mb-0" id="temp-display">
                         9°C
                     </p>
@@ -71,51 +61,10 @@
                     </div>
                 </div>
                 <!--------HERE IS WHERE ALL THE INFORMATION IN LARGE IS />-->
-                <div class="col-md-6 my-5 pb-5">
-                    <!---------------------------HERE IS WHERE ALL THE INFORMATION IN SMALLER SIZE IS-->
-                    <hr class="separator d-md-none" />
-                    <!----------------------------------FIRST SECTION-->
-                    <p class="weather-small text-center p-3">Windy</p>
-                    <div class="days-wrap text-center">
-                        <p class="temp-small align-bottom">9°C</p>
-                        <img src="images/windy.png" alt="clouds and wind icon" class="img-fluid weather-icon" />
-                    </div>
-                    <p class="date-small mb-0">02/01/2021</p>
-                    <hr class="separator" />
-                    <!----------------------------SECOND SECTION-->
-                    <p class="weather-small text-center p-3">Clear</p>
-                    <div class="days-wrap text-center">
-                        <p class="temp-small align-bottom">11°C</p>
-                        <img src="images/clear.png" alt="clouds and wind icon" class="img-fluid weather-icon" />
-                    </div>
-                    <p class="date-small mb-0">03/01/2021</p>
-                    <hr class="separator" />
-                    <!---------------------------THIRD SECTION-->
-                    <p class="weather-small text-center p-3">Rain</p>
-
-                    <div class="days-wrap text-center">
-                        <p class="temp-small align-bottom">7°C</p>
-                        <img src="images/rain.png" alt="clouds and wind icon" class="img-fluid weather-icon" />
-                    </div>
-                    <p class="date-small mb-0">04/01/2021</p>
-                    <hr class="separator" />
-                    <!-------------------------FOURTH SECTION-->
-                    <p class="weather-small text-center p-3">Storms</p>
-                    <div class="days-wrap text-center">
-                        <p class="temp-small align-bottom">3°C</p>
-                        <img src="images/storms.png" alt="clouds and wind icon" class="img-fluid weather-icon" />
-                    </div>
-                    <p class="date-small mb-0">05/01/2021</p>
-                    <hr class="separator" />
-                    <!--------------------------FIFTH SECTION-->
-                    <p class="weather-small text-center p-3">Snow</p>
-                    <div class="days-wrap text-center">
-                        <p class="temp-small align-bottom">-3°C</p>
-                        <img src="images/snow.png" alt="clouds and wind icon" class="img-fluid weather-icon" />
-                    </div>
-                    <p class="date-small mb-0">06/01/2021</p>
-                    <hr class="separator" />
+                <div class="col-md-6">
+                    <h1 class="header-large text-center">Mostly Cloudy</h1>
                 </div>
+                <!---->
                 <!---------------------------HERE IS WHERE ALL THE INFORMATION IN SMALLER SIZE IS />-->
             </div>
         </div>
