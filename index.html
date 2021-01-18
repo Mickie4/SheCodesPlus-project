@@ -16,13 +16,15 @@
 <body>
     <div class="container-fluid wrap"> <!---------------------- ENTIRE APP WRAPPER-->
 <nav class="navbar navbar-light bg-none mb-3"> <!----------SEARCH BAR-->
-    <div class="container-fluid mt-3">
-        <form class="search-bar d-flex" id="search-form">
-            <input class="search-field form-control me-3 text-center" id="search-name" type="text" placeholder="City" aria-label="Search" autocomplete="off" autofocus="off">
+    <div class="form-inline search-bar mt-3">
+        <form class="search-bar" id="search-form">
+            <div class="form-group">
+            <input class="search-field form-control mb-3 text-center" id="search-name" type="text" placeholder="Enter a city" aria-label="Search" autocomplete="off" autofocus="off">
             <button class="search" id="search-button" type="submit">Search</button>
-            <button class="search" id="current-location" type="button">Current</button>
+            </div>
+            <button class="search" id="current-location" type="button">Current Location</button>
+        </div>
         </form>
-    </div>
 </nav> <!----------SEARCH BAR />-->
 
 <div class="container display p-5"> <!---------HOLDER FOR ALL THE INFORMATION WITH TRANSPARENT BACKGROUND-->
@@ -31,10 +33,10 @@
             <h1 class="day-large p-3 text-center" id="city-name">
                 Mexico City
             </h1>
-            <p class="date-large text-center">
+            <p class="date-large text-center" id="current-day">
                 Monday
             </p>
-            <h2 class="date-large text-center">
+            <h2 class="date-large text-center" >
                 1 January 2021
             </h2>
             <h2 class="date-large text-center" id="current-time">15:02</h2>
