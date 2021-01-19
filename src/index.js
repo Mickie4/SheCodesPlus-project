@@ -16,9 +16,9 @@ function searchEngine(event) {
         let descriptionDisplay = document.querySelector("#description");
         descriptionDisplay.innerHTML = `${description}`;
         let humidityDisplay = document.querySelector("#humidity");
-        humidityDisplay.innerHTML = `${humidity}%`;
+        humidityDisplay.innerHTML = `Humidity: ${humidity}%`;
         let speedDisplay = document.querySelector("#speed");
-        speedDisplay.innerHTML = `${speed} Km/h`
+        speedDisplay.innerHTML = `Speed: ${speed} Km/h`
 
 
     }
