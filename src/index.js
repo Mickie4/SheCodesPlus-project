@@ -33,7 +33,7 @@ function searchEngine(event) {
         let timeDisplay = document.querySelector("#current-time");
         timeDisplay.innerHTML = formatDate(response.data.dt * 1000); //this is the part that will carry the timestamp taken from the API to the function that will format this into a readable string.
         let iconDisplay = document.querySelector("#icon");
-        iconDisplay.setAttribute("src", `http://openweathermap.org/img/wn/${icon}@2x.png`)
+        iconDisplay.setAttribute("src", `images/${icon}.png`);
 
     }
 
