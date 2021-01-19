@@ -118,12 +118,9 @@ p.date-small {
     text-align: right;
 }
 
-hr.separator {
+.separator {
     color: #f1f6f9;
-    width: 600px;
-    height: 5px;
-    margin: 0 auto;
-    border-radius: 5px;
+    font-size: 1em;
 }
 
 .small {
