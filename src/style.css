@@ -57,10 +57,10 @@ body {
     font-size: 1.4em;
 }
 
-.weather-description-large {
-    font-family: "Pacifico", cursive;
-    color: #f1f6f9;
-    font-size: 3em;
+.icon-img {
+    width: 90px;
+    height: 75px;
+    margin-left: 150px;
 }
 
 .temp-large {
@@ -82,45 +82,10 @@ body {
     color: #f5b461;
 }
 
-.icon-img {
-    width: 350px;
-    display: inline;
-}
-
 .city-large {
     color: #f1f6f9;
     font-size: 2em;
     font-family: "Mali", cursive;
-}
-
-.weather-small {
-    font-family: "Pacifico", cursive;
-    color: #f1f6f9;
-    font-size: 3em;
-}
-
-.weather-icon {
-    width: 150px;
-}
-
-p.temp-small {
-    font-size: 2.5em;
-    color: #f1f6f9;
-    font-family: "Mali", cursive;
-    display: inline;
-}
-
-p.date-small {
-    font-size: 1em;
-    font-family: "Mali", cursive;
-    color: #f1f6f9;
-    display: block;
-    text-align: right;
-}
-
-.separator {
-    color: #f1f6f9;
-    font-size: 1em;
 }
 
 .small {
@@ -151,28 +116,15 @@ p.date-small {
         font-size: 1.5em;
         text-align: center;
     }
-    .weather-description-large {
-        font-size: 2.5em;
+    .icon-img {
+        width: 75px;
+        height: 65px;
+        margin-left: 75px;
     }
     .temp-large {
         font-size: 3em;
     }
-    .cloudy {
-        width: 250px;
-    }
     .city-large {
         font-size: 1.2em;
-    }
-    hr.separator {
-        width: 280px;
-    }
-    .weather-small {
-        font-size: 2.5em;
-    }
-    p.temp-small {
-        font-size: 1.5em;
-    }
-    .weather-icon {
-        width: 85px;
     }
 }

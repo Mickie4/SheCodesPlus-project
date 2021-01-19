@@ -17,7 +17,8 @@ function searchEngine(event) {
         let cityTemp = Math.round(response.data.main.temp);
         let description = response.data.weather[0].description;
         let humidity = response.data.main.humidity;
-        let speed = response.data.wind.speed;
+        let speed = Math.round(response.data.wind.speed);
+        let icon = response.data.weather[0].icon;
 
         let cityDisplay = document.querySelector("#city-name");
         cityDisplay.innerHTML = `${cityName}, ${countryName}`;
@@ -31,7 +32,8 @@ function searchEngine(event) {
         speedDisplay.innerHTML = `Speed: ${speed} Km/h`
         let timeDisplay = document.querySelector("#current-time");
         timeDisplay.innerHTML = formatDate(response.data.dt * 1000); //this is the part that will carry the timestamp taken from the API to the function that will format this into a readable string.
-
+        let iconDisplay = document.querySelector("#icon");
+        iconDisplay.setAttribute("src", `http://openweathermap.org/img/wn/${icon}@2x.png`)
 
     }
 
