@@ -25,7 +25,7 @@
                 <form id="search-form" class="mt-3">
                     <div class="row">
                         <div class="col-6 mb-3">
-                            <input class="search-field form-control mb-3 text-center" id="search-name" type="text" placeholder="Enter a city" aria-label="Search" autocomplete="off" autofocus="off" />
+                            <input class="search-field form-control mb-3 text-center" id="search-city" type="text" placeholder="Enter a city" aria-label="Search" autocomplete="off" autofocus="off" />
                         </div>
                         <div class="col-3">
                             <button class="search" id="search-button" type="submit">
@@ -45,9 +45,10 @@
                     <!--------HERE IS WHERE ALL THE INFORMATION IN LARGE IS-->
                     <h1 class="header-large text-center" id="city-name">Mexico City</h1>
                     <p class="date-large text-center mt-3" id="current-time">15:02</p>
-                    <p class="temp-large text-center mt-3 mb-0" id="temp-display">
-                        9°C
-                    </p>
+                    <div class="text-center">
+                        <img src="images/cloudy.png" alt="clouds flat icon" class="img-fluid icon-img" />
+                    </div>
+                    <p class="temp-large text-center mt-3 mb-0" id="temp">9°C</p>
                     <div class="temp-buttons text-center">
                         <button class="temp-btn btn-lg" id="temp-c" type="submit">
                 °C
@@ -56,13 +57,18 @@
                 °F
               </button>
                     </div>
-                    <div class="img-wrap text-center">
-                        <img src="images/cloudy.png" alt="clouds flat icon" class="img-fluid cloudy" />
-                    </div>
                 </div>
                 <!--------HERE IS WHERE ALL THE INFORMATION IN LARGE IS />-->
                 <div class="col-md-6">
-                    <h1 class="header-large text-center">Mostly Cloudy</h1>
+                    <h1 class="header-large text-center" id="description">
+                        Mostly Cloudy
+                    </h1>
+                    <br />
+                    <p class="date-large text-center mt3" id="humidity">
+                        Humidity: 56%
+                    </p>
+                    <br />
+                    <p class="date-large text-center" id="speed">Wind: 2Km/h</p>
                 </div>
                 <!---->
                 <!---------------------------HERE IS WHERE ALL THE INFORMATION IN SMALLER SIZE IS />-->

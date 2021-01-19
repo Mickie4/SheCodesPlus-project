@@ -81,8 +81,9 @@ body {
     color: #f5b461;
 }
 
-.cloudy {
-    width: 450px;
+.icon-img {
+    width: 350px;
+    display: inline;
 }
 
 .city-large {
