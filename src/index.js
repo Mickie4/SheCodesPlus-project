@@ -1,7 +1,17 @@
 function searchEngine(event) {
     event.preventDefault()
 
-    function showInfo(response) {
+    function formatDate(timestamp) {
+        let newTime = timestamp;
+        let cityTime = new Date(newTime);
+        let date = cityTime.toDateString();
+        let hours = cityTime.getHours();
+        let mins = cityTime.getMinutes();
+        return `Last updated: ${date} at ${hours}:${mins}`;
+
+    }
+
+    function showInfo(response) { //this functions is what gets triggered once the call to the API its made.
         let cityName = response.data.name;
         let countryName = response.data.sys.country;
         let cityTemp = Math.round(response.data.main.temp);
@@ -19,11 +29,13 @@ function searchEngine(event) {
         humidityDisplay.innerHTML = `Humidity: ${humidity}%`;
         let speedDisplay = document.querySelector("#speed");
         speedDisplay.innerHTML = `Speed: ${speed} Km/h`
+        let timeDisplay = document.querySelector("#current-time");
+        timeDisplay.innerHTML = formatDate(response.data.dt * 1000); //this is the part that will carry the timestamp taken from the API to the function that will format this into a readable string.
 
 
     }
 
-    let cityInput = document.querySelector("#search-city");
+    let cityInput = document.querySelector("#search-city"); //this is where the user's city search arrives the first time
     let city = `${cityInput.value}`;
     let apiKey = "0603e85b4ce086e6bb52d7cdc7bcffb5";
     let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather?q=";
@@ -31,8 +43,8 @@ function searchEngine(event) {
     let far = "imperial";
     let apiUrl = `${apiEndPoint}${city}&units=${cel}&appid=${apiKey}`;
 
-    axios.get(apiUrl).then(showInfo);
+    axios.get(apiUrl).then(showInfo); //this is the axios command that uses the city and the rest of the API call elements to make the call
 }
 
-let searchBtn = document.querySelector("#search-form");
+let searchBtn = document.querySelector("#search-form"); //button that will trigger the search inside the API
 searchBtn.addEventListener("submit", searchEngine);
