@@ -6,8 +6,19 @@ function searchEngine(event) {
         let cityTime = new Date(newTime);
         let date = cityTime.toDateString();
         let hours = cityTime.getHours();
+
+        if (hours < 10) {
+            hours = `0${hours}`;
+        }
         let mins = cityTime.getMinutes();
+
+        if (mins < 10) {
+            mins = `0${mins}`;
+        }
+
         return `Last updated: ${date} at ${hours}:${mins}`;
+
+
 
     }
 
