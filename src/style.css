@@ -82,6 +82,11 @@ body {
     color: #f5b461;
 }
 
+.separator {
+    color: #f1f6f9;
+    font-size: 1em;
+}
+
 .city-large {
     color: #f1f6f9;
     font-size: 2em;
@@ -91,6 +96,7 @@ body {
 .small {
     margin-top: 75px;
     color: #f1f6f9;
+    font-family: 'Source Code Pro', monospace;
 }
 
 .small a {
