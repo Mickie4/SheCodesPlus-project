@@ -109,6 +109,11 @@ body {
     outline: #6bc5d7;
 }
 
+.forecast-icon {
+    width: 50px;
+    height: auto;
+}
+
 .separator {
     color: #f1f6f9;
     font-size: 1em;
@@ -148,5 +153,9 @@ body {
     .conditions {
         text-align: center;
         font-size: 0.8em;
+    }
+    .forcast-icon {
+        width: 50px;
+        height: auto;
     }
 }
