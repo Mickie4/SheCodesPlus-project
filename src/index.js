@@ -126,7 +126,7 @@ function searchEngine(event) {
     let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather?q=";
     let units = "metric";
     let apiUrl = `${apiEndPoint}${city}&units=${units}&appid=${apiKey}`;
-    let apiForecast = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${units}&appid=0603e85b4ce086e6bb52d7cdc7bcffb5`;
+    let apiForecast = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${units}&appid=0603e85b4ce086e6bb52d7cdc7bcffb5`;
 
     axios.get(apiUrl).then(showInfo); //this is the axios command that uses the city and the rest of the API call elements to make the call.
 
