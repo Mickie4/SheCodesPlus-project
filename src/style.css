@@ -22,6 +22,7 @@ body {
 .display {
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
+    margin: 0 auto;
 }
 
 
@@ -62,7 +63,7 @@ body {
 .description-large {
     font-family: "Pacifico", cursive;
     color: #f1f6f9;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .date-large {
@@ -134,13 +135,18 @@ body {
 /*---------------------------------------------------------------RESPONSIVE MEDIA QUERIES*/
 
 @media only screen and (max-width: 768px) {
+    .header-large {
+        font-size: 1.2em;
+    }
     .temp-large {
         font-size: 3em;
     }
     .description-large {
         text-align: center;
+        font-size: 1em;
     }
     .conditions {
         text-align: center;
+        font-size: 0.8em;
     }
 }
