@@ -77,12 +77,6 @@ body {
     font-size: 1em;
 }
 
-.icon-img {
-    width: 150px;
-    height: 100px;
-    margin-left: 100px;
-}
-
 .temp-large {
     font-family: "Mali", cursive;
     color: #f1f6f9;
@@ -140,11 +134,6 @@ body {
 /*---------------------------------------------------------------RESPONSIVE MEDIA QUERIES*/
 
 @media only screen and (max-width: 768px) {
-    .icon-img {
-        width: 95px;
-        height: 75px;
-        margin-left: 75px;
-    }
     .temp-large {
         font-size: 3em;
     }
