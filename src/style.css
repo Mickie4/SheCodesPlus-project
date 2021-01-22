@@ -81,17 +81,30 @@ body {
     font-size: 3em;
 }
 
-.temp-buttons,
 .temp-btn {
     background: none;
     border: none;
     color: #f1f6f9;
     transition: all 0.5s ease-in-out;
     font-family: "Mali", cursive;
+    cursor: none;
+}
+
+.active {
+    color: #f5b461;
+    transition: all 0.5s ease-in-out;
+    font-family: "Mali", cursive;
+    font-size: 1.2em;
+    cursor: none;
 }
 
 .temp-btn:hover {
     color: #f5b461;
+    cursor: default;
+}
+
+.temp-btn:focus {
+    outline: none;
 }
 
 .separator {

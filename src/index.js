@@ -1,3 +1,14 @@
+let searchBtn = document.querySelector("#search-form"); //button that will trigger the search inside the API
+searchBtn.addEventListener("submit", searchEngine);
+
+let farBtn = document.querySelector("#temp-f");
+farBtn.addEventListener("click", displayinImperial);
+
+let celBtn = document.querySelector("#temp-c");
+celBtn.addEventListener("click", displayCelsius);
+
+let celsiusTemp = null;
+
 function searchEngine(event) {
     event.preventDefault()
 
@@ -17,15 +28,12 @@ function searchEngine(event) {
         }
 
         return `Last updated: ${date} at ${hours}:${mins}`;
-
-
-
     }
 
     function showInfo(response) { //this functions is what gets triggered once the call to the API its made.
         let cityName = response.data.name;
         let countryName = response.data.sys.country;
-        let cityTemp = Math.round(response.data.main.temp);
+        celsiusTemp = Math.round(response.data.main.temp);
         let description = response.data.weather[0].description;
         let humidity = response.data.main.humidity;
         let speed = Math.round(response.data.wind.speed);
@@ -34,7 +42,7 @@ function searchEngine(event) {
         let cityDisplay = document.querySelector("#city-name");
         cityDisplay.innerHTML = `${cityName}, ${countryName}`;
         let tempDisplay = document.querySelector("#temp");
-        tempDisplay.innerHTML = `${cityTemp}°C`;
+        tempDisplay.innerHTML = `${celsiusTemp}°C`;
         let descriptionDisplay = document.querySelector("#description");
         descriptionDisplay.innerHTML = `${description}`;
         let humidityDisplay = document.querySelector("#humidity");
@@ -52,12 +60,25 @@ function searchEngine(event) {
     let city = `${cityInput.value}`;
     let apiKey = "0603e85b4ce086e6bb52d7cdc7bcffb5";
     let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather?q=";
-    let cel = "metric";
-    let far = "imperial";
-    let apiUrl = `${apiEndPoint}${city}&units=${cel}&appid=${apiKey}`;
+    let units = "metric";
+    let apiUrl = `${apiEndPoint}${city}&units=${units}&appid=${apiKey}`;
 
     axios.get(apiUrl).then(showInfo); //this is the axios command that uses the city and the rest of the API call elements to make the call
 }
 
-let searchBtn = document.querySelector("#search-form"); //button that will trigger the search inside the API
-searchBtn.addEventListener("submit", searchEngine);
+function displayinImperial(event) {
+    event.preventDefault();
+    farBtn.classList.add("active");
+    celBtn.classList.remove("active");
+    let fahrTemp = Math.round((celsiusTemp * 9 / 5) + 32);
+    let tempDisplay = document.querySelector("#temp");
+    tempDisplay.innerHTML = `${fahrTemp}°F`;
+}
+
+function displayCelsius(event) {
+    event.preventDefault();
+    celBtn.classList.add("active");
+    farBtn.classList.remove("active");
+    let tempDisplay = document.querySelector("#temp");
+    tempDisplay.innerHTML = `${celsiusTemp}°C`;
+}
