@@ -41,6 +41,14 @@ body {
     color: #f5b461;
 }
 
+.search:focus {
+    outline: #6bc5d7;
+}
+
+.search-field:focus {
+    outline: #6bc5d7;
+}
+
 
 /*------------------------------------------------------MAIN STYLING*/
 
@@ -104,7 +112,7 @@ body {
 }
 
 .temp-btn:focus {
-    outline: none;
+    outline: #6bc5d7;
 }
 
 .separator {
