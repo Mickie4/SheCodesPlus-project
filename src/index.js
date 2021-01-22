@@ -12,12 +12,9 @@ let celsiusTemp = null; // global variable that takes its value from the showInf
 function searchEngine(event) {
     event.preventDefault()
 
-    function formatDate(timestamp) { //this functions its the one currently showing the local time or "last updated".
-        let newTime = timestamp;
-        let cityTime = new Date(newTime);
+    function formatDate(timestamp) { //this functions its the one currently showing the date".
+        let cityTime = new Date(timestamp);
         let date = cityTime.getDate();
-        let hours = cityTime.getHours();
-        let mins = cityTime.getMinutes();
         let week = [
             "Sunday",
             "Monday",
@@ -43,15 +40,7 @@ function searchEngine(event) {
         let day = week[cityTime.getDay()];
         let month = months[cityTime.getMonth()];
 
-        if (hours < 10) {
-            hours = `0${hours}`;
-        }
-
-        if (mins < 10) {
-            mins = `0${mins}`;
-        }
-
-        return `${day} ${date} ${month} ${hours}:${mins}`;
+        return `${day} ${date} ${month} ${formatHours(timestamp)}`;
     }
 
     function formatHours(timestamp) {
@@ -71,25 +60,27 @@ function searchEngine(event) {
     }
 
     function showForecast(response) {
-        let forecastTime = response.data.list[0].dt * 1000;
-        let max = Math.round(response.data.list[0].main.temp_max);
-        let min = Math.round(response.data.list[0].main.temp_min);
-        let icon = response.data.list[0].weather[0].icon;
         let forecastDisplay = document.querySelector("#forecast-display");
-        forecastDisplay.innerHTML = `
+        let forecast = null;
+        forecastDisplay.innerHTML = null;
+
+        for (let index = 0; index < 6; index++) {
+            forecast = response.data.list[index];
+            forecastDisplay.innerHTML += `
         <div class="col-sm-2 text-center date-large mb-5">
-            <h3 class="date-large">
-                ${formatHours(forecastTime)}
+                <h3 class="date-large">
+                ${formatHours(forecast.dt * 1000)}
             </h3>
-            <img src="images/${icon}.png" alt="forecast icon" class="img-fluid forecast-icon">
+            <img src="images/${forecast.weather[0].icon}.png" alt="forecast icon" class="img-fluid forecast-icon">
             <div class="forecast-temperatures">
                 <strong>
-                        max ${max}°
+                         ${Math.round(forecast.main.temp_max)}°
                  </strong> 
-                 <br/>
-                 min 16°
+                  ${Math.round(forecast.main.temp_min)}°
             </div>
         </div>`;
+
+        }
 
     }
 
