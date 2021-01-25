@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/title-20.png" alt="website mockup"=/>
+    <img src="images/title-20.png" alt="website mockup"=/>
 </p>
 
 ## Description ##
